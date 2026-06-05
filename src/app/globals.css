@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-light text-text-main antialiased;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  ::selection {
+    @apply bg-vital/20 text-secondary;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-5 lg:px-8;
+  }
+
+  .page-container {
+    @apply mx-auto max-w-content;
+  }
+}
