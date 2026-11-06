@@ -280,6 +280,18 @@ function recentMemories(userId) {
   return xiaozou.recentMemories(userId);
 }
 
+function normalizeSession(value) {
+  const raw = value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  return {
+    mood: String(raw.mood || '').slice(0, 40),
+    door: String(raw.door || '').slice(0, 40),
+    pace: String(raw.pace || '').slice(0, 40),
+    vibe: String(raw.vibe || '').slice(0, 40),
+    bias: String(raw.bias || '').slice(0, 40),
+    shift: Number.isInteger(raw.shift) ? raw.shift : 0
+  };
+}
+
 async function handleApi(req, res, pathname) {
   if (pathname === '/api/auth/register' && req.method === 'POST') {
     const body = await readJsonBody(req);
@@ -395,10 +407,32 @@ async function handleApi(req, res, pathname) {
     return sendJson(res, 200, { itineraries: xiaozou.getItineraries(requireUser(req)) });
   }
 
+  if (pathname === '/api/chat/opening' && req.method === 'POST') {
+    const body = await readJsonBody(req);
+    requireObject(body);
+    const session = normalizeSession(body.session);
+    const user = currentUser(req);
+    const reply = xiaozou.opening(user, session);
+    if (user) xiaozou.addTurn(user, 'text', 'assistant', reply);
+    return sendJson(res, 200, { reply });
+  }
+
   if (pathname === '/api/chat' && req.method === 'POST') {
     const body = await readJsonBody(req);
     requireObject(body);
-    return sendJson(res, 200, xiaozou.chat(currentUser(req), body));
+    const text = typeof body.message === 'string' ? body.message.trim().slice(0, 1000) : '';
+    if (!text) throw httpError(400, 'message is required');
+    const user = currentUser(req);
+    const session = normalizeSession(body.session);
+    let reply = '';
+    if (xiaozou.useModelUnderstanding(text)) {
+      try {
+        reply = await requestTextModel(xiaozou.buildContext(user, session), text);
+      } catch (error) {
+        console.warn('Text model unavailable; using deterministic fallback:', error.message);
+      }
+    }
+    return sendJson(res, 200, xiaozou.chat(user, body, { reply }));
   }
 
   if (pathname === '/api/conversation' && req.method === 'POST') {
@@ -475,6 +509,52 @@ function serveStatic(req, res, pathname) {
   });
 }
 
+function requestTextModel(systemPrompt, text) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      messages: [{ role: 'user', content: text }],
+      systemPrompt,
+      stream: false
+    });
+    const up = https.request({
+      host: UP,
+      port: 443,
+      path: '/api/chat',
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json; charset=utf-8',
+        'content-length': Buffer.byteLength(body)
+      }
+    }, (ur) => {
+      const chunks = [];
+      let size = 0;
+      ur.on('data', chunk => {
+        size += chunk.length;
+        if (size > 1024 * 1024) {
+          ur.destroy(new Error('Text model response too large'));
+          return;
+        }
+        chunks.push(chunk);
+      });
+      ur.on('end', () => {
+        try {
+          if (ur.statusCode !== 200) throw new Error('Text model status ' + ur.statusCode);
+          const data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+          const reply = typeof data.content === 'string' ? data.content.trim().slice(0, 4000) : '';
+          if (!reply) throw new Error('Text model returned empty content');
+          resolve(reply);
+        } catch (error) {
+          reject(error);
+        }
+      });
+      ur.on('error', reject);
+    });
+    up.setTimeout(30000, () => up.destroy(new Error('Text model timeout')));
+    up.on('error', reject);
+    up.end(body);
+  });
+}
+
 function forwardVoice(req, res, body) {
   const headers = upstreamHeaders(req.headers);
   if (body) {
@@ -500,22 +580,17 @@ async function proxyVoice(req, res) {
   const input = await readJsonBody(req);
   requireObject(input);
   const user = currentUser(req);
-  const rawSession = input.session && typeof input.session === 'object' ? input.session : {};
-  const session = {
-    mood: String(rawSession.mood || '').slice(0, 40),
-    door: String(rawSession.door || '').slice(0, 40),
-    pace: String(rawSession.pace || '').slice(0, 40),
-    vibe: String(rawSession.vibe || '').slice(0, 40),
-    bias: String(rawSession.bias || '').slice(0, 40),
-    shift: Number.isInteger(rawSession.shift) ? rawSession.shift : 0
-  };
+  const session = normalizeSession(input.session);
+  const openingText = xiaozou.opening(user, session);
+  const systemPrompt = xiaozou.buildContext(user, session);
+  if (user) xiaozou.addTurn(user, 'voice', 'assistant', openingText);
   const ticketInput = {
     userId: 'xz-' + (user ? String(user.id) : 'guest') + '-' + Date.now(),
     ceoId: 'xiaozou',
     ceoName: '小走',
-    systemPrompt: xiaozou.buildContext(user, session),
+    systemPrompt,
     voiceId: 'ICL_uranus_zh_female_wenrouwenya_tob',
-    openingText: user ? user.displayName + '，我在。今天想怎么走？' : '我在。今天想怎么走？'
+    openingText
   };
   return forwardVoice(req, res, JSON.stringify(ticketInput));
 }

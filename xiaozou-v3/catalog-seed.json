@@ -126,7 +126,7 @@
       "scope": "near",
       "sortOrder": 2,
       "venue": {
-        "img": "images/inline-04.jpg",
+        "img": "images/event1.jpg",
         "tag": "放空 · 茶山",
         "name": "立夏与海",
         "line": "松阳松庄村，狗123领路，李霞带你徒步、摘板栗，晚上土灶做饭。",
@@ -481,7 +481,7 @@
       "scope": "near",
       "sortOrder": 5,
       "venue": {
-        "img": "images/inline-08.jpg",
+        "img": "images/near.jpg",
         "tag": "耍皮 · 走路",
         "name": "GOFREE",
         "line": "杭州周边户外社群，大可带你徒步溯溪，不会游泳也有人拎着过，先迈脚就行。",
@@ -721,7 +721,7 @@
       "scope": "far",
       "sortOrder": 2,
       "venue": {
-        "img": "images/inline-05.jpg",
+        "img": "images/season.jpg",
         "tag": "放空 · 草原",
         "name": "南境旅居",
         "line": "腾冲玛御谷，周磊让你住下来泡温泉，社团和徒步按你的节奏跟。",
