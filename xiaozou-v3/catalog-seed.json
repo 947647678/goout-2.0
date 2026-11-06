@@ -7,13 +7,13 @@
       "scope": "near",
       "sortOrder": 1,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/taihu.jpg",
         "tag": "放空 · 晨练",
         "name": "青溪山居",
         "line": "千岛湖青溪村，车停山脚接驳上山，叶万红带你从私藏小路看湖，院子里有桃子。",
         "host": "叶万红",
         "role": "主理人 · 早上他都在",
-        "ha": "assets/p-laozhou.jpg",
+        "ha": "images/av-yewh.png",
         "time": "周日 11.01",
         "dist": "杭州 · 180km",
         "seat": "有空",
@@ -43,7 +43,7 @@
           "私藏徒步",
           "盘山路走到头"
         ],
-        "hero": "assets/hero-maple.jpg",
+        "hero": "images/taihu.jpg",
         "dayTitle": "一天怎么过",
         "day": [
           [
@@ -99,9 +99,9 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-1-real.jpg",
+        "img": "images/inline-06.jpg",
         "pos": "center 50%",
-        "av": "assets/p-laozhou.jpg",
+        "av": "images/inline-07.jpg",
         "slogan": "自然才是<br>永不褪色的时尚。",
         "host": "叶万红",
         "role": "「游侠客」创始人之一，<br>敢于「另辟蹊径」的领队。",
@@ -126,13 +126,13 @@
       "scope": "near",
       "sortOrder": 2,
       "venue": {
-        "img": "assets/e-4-real.png",
+        "img": "images/inline-04.jpg",
         "tag": "放空 · 茶山",
         "name": "立夏与海",
         "line": "松阳松庄村，狗123领路，李霞带你徒步、摘板栗，晚上土灶做饭。",
         "host": "李霞",
         "role": "主理人 · 松庄她熟",
-        "ha": "assets/p-ruoci.jpg",
+        "ha": "images/av-lixia.png",
         "time": "下周三 11.04",
         "dist": "松阳 · 约 400km",
         "seat": "有空",
@@ -163,7 +163,7 @@
           "三间房",
           "狗123带路"
         ],
-        "hero": "assets/e-6-real.png",
+        "hero": "images/inline-04.jpg",
         "heroPos": "center 30%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -220,7 +220,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-6-real.png",
+        "img": "images/inline-04.jpg",
         "pos": "center 30%",
         "slogan": "在松庄的溪水声里，<br>等你来翻一本故事书",
         "host": "李霞",
@@ -245,13 +245,13 @@
       "scope": "near",
       "sortOrder": 3,
       "venue": {
-        "img": "assets/e-10-real.png",
+        "img": "images/mogan.jpg",
         "tag": "耍皮 · 运动",
         "name": "莫干山运动",
         "line": "莫干山那家运动民宿的老板，一周至少五天自己下场带瑜伽、骑行、皮划艇、攀岩，跟着就能动起来。",
         "host": "夏雨森",
         "role": "主理人 · 运动民宿老板",
-        "ha": "assets/e-6-real.png",
+        "ha": "images/inline-01.jpg",
         "time": "下周六 11.07",
         "dist": "德清 · 180km",
         "seat": "有空",
@@ -281,7 +281,7 @@
           "不赶场",
           "老板带队"
         ],
-        "hero": "assets/e-6-real.png",
+        "hero": "images/inline-01.jpg",
         "heroPos": "center 24%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -337,7 +337,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-6-real.png",
+        "img": "images/inline-01.jpg",
         "pos": "center 24%",
         "slogan": "天天泡在山里的<br>户外玩家",
         "host": "夏雨森",
@@ -362,13 +362,13 @@
       "scope": "near",
       "sortOrder": 4,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/tianping.jpg",
         "tag": "耍皮 · 骑行",
         "name": "苏州文旅",
         "line": "小金带你进园林，先讲一扇窗再拍照，避开填鸭路线，听懂再走。",
         "host": "小金",
         "role": "主理人 · 平路他熟",
-        "ha": "assets/p-xiaoman.jpg",
+        "ha": "images/av-jiangzp.png",
         "time": "周日 11.08",
         "dist": "苏州 · 100km",
         "seat": "有空",
@@ -399,7 +399,7 @@
           "不填鸭",
           "文化讲解"
         ],
-        "hero": "assets/hero-maple.jpg",
+        "hero": "images/hero-xiaojin.jpg",
         "heroPos": "center 50%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -456,7 +456,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/hero-maple.jpg",
+        "img": "images/hero-xiaojin.jpg",
         "pos": "center 50%",
         "slogan": "用胶东话破冰的<br>“苏州王力宏”",
         "host": "小金",
@@ -481,13 +481,13 @@
       "scope": "near",
       "sortOrder": 5,
       "venue": {
-        "img": "assets/e-9-real.png",
+        "img": "images/inline-08.jpg",
         "tag": "耍皮 · 走路",
         "name": "GOFREE",
         "line": "杭州周边户外社群，大可带你徒步溯溪，不会游泳也有人拎着过，先迈脚就行。",
         "host": "大可",
         "role": "主理人 · 不拿旗",
-        "ha": "assets/p-chen.jpg",
+        "ha": "images/av-dake.png",
         "time": "下周日 11.08",
         "dist": "杭州 · 180km",
         "seat": "有空",
@@ -517,7 +517,7 @@
           "净山",
           "6000+会员"
         ],
-        "hero": "assets/e-9-real.png",
+        "hero": "images/inline-08.jpg",
         "heroPos": "center 66%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -574,7 +574,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-9-real.png",
+        "img": "images/inline-08.jpg",
         "pos": "center 66%",
         "slogan": "你来一次就知道了，<br>高矮胖瘦什么样的都有。",
         "host": "大可",
@@ -601,13 +601,13 @@
       "scope": "far",
       "sortOrder": 1,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/dali.jpg",
         "tag": "放空 · 烤面包",
         "name": "面包树花园",
         "line": "大理银桥花园里摘迷迭香，跟叶小贤学烤面包，发酵时在园子里待着。",
         "host": "叶小贤",
         "role": "主理人 · 银桥园子",
-        "ha": "assets/p-ruoci.jpg",
+        "ha": "images/av-yexx.png",
         "time": "11.28 出发",
         "dist": "大理 · 直飞",
         "seat": "有空",
@@ -639,7 +639,7 @@
           "从摘香草到进烤炉",
           "不赶"
         ],
-        "hero": "assets/e-8-real.jpg",
+        "hero": "images/inline-02.jpg",
         "heroPos": "center 58%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -696,7 +696,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-8-real.jpg",
+        "img": "images/inline-02.jpg",
         "pos": "center 58%",
         "slogan": "住进风景里的家，<br>而不是路过它",
         "host": "叶小贤",
@@ -721,13 +721,13 @@
       "scope": "far",
       "sortOrder": 2,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/inline-05.jpg",
         "tag": "放空 · 草原",
         "name": "南境旅居",
         "line": "腾冲玛御谷，周磊让你住下来泡温泉，社团和徒步按你的节奏跟。",
         "host": "周磊",
         "role": "主理人 · 腾冲他熟",
-        "ha": "assets/p-laozhou.jpg",
+        "ha": "images/av-zhoulei.png",
         "time": "11.21 出发",
         "dist": "腾冲 · 飞机+车",
         "seat": "有空",
@@ -757,7 +757,7 @@
           "20+社团",
           "不赶路"
         ],
-        "hero": "assets/e-8-real.jpg",
+        "hero": "images/inline-05.jpg",
         "heroPos": "center 62%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -814,7 +814,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-8-real.jpg",
+        "img": "images/inline-05.jpg",
         "pos": "center 62%",
         "slogan": "过客也能在腾冲<br>落成半个本地人",
         "host": "周磊",
@@ -839,13 +839,13 @@
       "scope": "far",
       "sortOrder": 3,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/siguniang.jpg",
         "tag": "放空 · 牧场",
         "name": "洛桑松巴民宿",
         "line": "尼汝村里唐耀东牵马驮装备上牧场，你跟着走，住他家喝酥油茶。",
         "host": "唐耀东",
         "role": "主理人 · 尼汝本地人",
-        "ha": "assets/p-alan.jpg",
+        "ha": "images/av-tangyd.png",
         "time": "12.05 出发",
         "dist": "尼汝 · 包车",
         "seat": "有空",
@@ -878,7 +878,7 @@
           "海拔4000米",
           "不是景区"
         ],
-        "hero": "assets/e-3-real.jpg",
+        "hero": "images/inline-03.jpg",
         "heroPos": "center 42%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -935,7 +935,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-3-real.jpg",
+        "img": "images/inline-03.jpg",
         "pos": "center 42%",
         "slogan": "我在太阳照耀的地方<br>等你来做客",
         "host": "唐耀东",
@@ -960,13 +960,13 @@
       "scope": "far",
       "sortOrder": 4,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/yangshuo.jpg",
         "tag": "嗨皮 · 看风光",
         "name": "辞职信旅行",
         "line": "沈想想按天气组同龄团，被安排明白但不被绑住，看够一处就走。",
         "host": "沈想想",
         "role": "主理人 · 风光她熟",
-        "ha": "assets/p-chen.jpg",
+        "ha": "images/av-shenxx.png",
         "time": "12.12 出发",
         "dist": "按天气定",
         "seat": "有空",
@@ -997,7 +997,7 @@
           "摄影师跟拍",
           "安全+旅拍+带队"
         ],
-        "hero": "assets/e-11-real.jpg",
+        "hero": "images/inline-09.jpg",
         "heroPos": "center 48%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -1054,7 +1054,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-11-real.jpg",
+        "img": "images/inline-09.jpg",
         "pos": "center 48%",
         "slogan": "想找寻一群<br>和我一样的人。",
         "host": "沈想想",
@@ -1079,13 +1079,13 @@
       "scope": "far",
       "sortOrder": 5,
       "venue": {
-        "img": "assets/hero-maple.jpg",
+        "img": "images/dunhuang.jpg",
         "tag": "嗨皮 · 公路",
         "name": "不二小众旅行",
         "line": "新疆公路上，热茶看到想停的地方就打灯，当晚停在说好的镇子，不按死计划赶。",
         "host": "热茶（刘振达）",
         "role": "主理人 · 公路他开",
-        "ha": "assets/p-xiaoman.jpg",
+        "ha": "images/av-liuzd.png",
         "time": "12.02 出发",
         "dist": "新疆 · 飞机+车",
         "seat": "有空",
@@ -1116,7 +1116,7 @@
           "实地踩线",
           "不赶路"
         ],
-        "hero": "assets/e-11-real.jpg",
+        "hero": "images/inline-10.jpg",
         "heroPos": "center 50%",
         "dayTitle": "一天怎么过",
         "day": [
@@ -1173,7 +1173,7 @@
       },
       "cover": {
         "theme": "kcard",
-        "img": "assets/e-11-real.jpg",
+        "img": "images/inline-10.jpg",
         "pos": "center 50%",
         "slogan": "来自新疆的<br>朋友接待站。",
         "host": "热茶（刘振达）",
