@@ -1,0 +1,43 @@
+services:
+  app:
+    image: node:23-alpine
+    container_name: xiaozou-product
+    user: "1000:1000"
+    working_dir: /app
+    command: ["node", "--experimental-sqlite", "voice-proxy-server.js"]
+    environment:
+      NODE_ENV: production
+      PORT: 8099
+      DB_PATH: /data/xiaozou.db
+      CATALOG_ADMIN_USERS: ${CATALOG_ADMIN_USERS:-}
+    volumes:
+      - ./:/app:ro
+      - ./data:/data
+    expose:
+      - "8099"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8099/api/auth/me"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: xiaozou-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  caddy-data:
+  caddy-config:

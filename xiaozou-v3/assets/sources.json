@@ -1,0 +1,33 @@
+{
+  "note": "v1 小程序 public/images 共 161 个文件（61MB）。A=可作主图，B=可作细节/辅助图，C=踩点纪实或界面素材，D=品牌/运营素材。v2 已改为全部使用 v1 真实踩点场地（不再虚构场地名）。真实场地：树山、火塘、鼓圈、匹克球、重元寺、飞跃里、荡口。",
+  "used": [
+    { "file": "shushan/cover.jpg", "to": "陈姐 · 树山喝茶", "grade": "A", "note": "真实树山村口：竹篱、白墙、山；assets/e-2-real.jpg" },
+    { "file": "firepit-music-bar.jpg", "to": "老周 · 火塘音乐酒吧", "grade": "A", "note": "真实火塘：驻唱、暖灯；assets/e-3-real.jpg" },
+    { "file": "jammala/03-intimate-session.png", "to": "阿岚 · JAMMALA 鼓圈", "grade": "A", "note": "真实鼓室：围坐一圈鼓；assets/e-4-real.png" },
+    { "file": "pickleball/01-court-net.png", "to": "阿岚 · Padel U 匹克球", "grade": "A", "note": "真实 COURT 球场；assets/e-6-real.png" },
+    { "file": "chongyuan/06.jpg", "to": "若慈 · 重元寺荷塘", "grade": "A", "note": "重元寺暖棕暖光实拍；assets/e-1-real.jpg" },
+    { "file": "dangkou/06.jpg", "to": "小满 · 荡口古镇走一圈", "grade": "A", "note": "荡口古镇白墙河道；assets/e-8-real.jpg" },
+    { "file": "feiyueli/cover.png", "to": "阿岚 · 飞跃里一处院子", "grade": "A", "note": "翡悦里庭院，暖明亮；assets/e-9-real.png" }
+  ],
+  "available": {
+    "sikou": { "grade": "B", "note": "四口日田·云南非遗火塘烤茶（虹桥·上海，约￥388）；已下载 assets/e-10-real.png，备用" },
+    "pigs": { "grade": "B", "note": "小猪酒馆夜晚吧台（暖但偏夜）；已下载 assets/e-11-real.jpg，备用" },
+    "shushan": { "grade": "A/B", "note": "树山系列其余：村道、茶桌、民宿细节" },
+    "dangkou": { "grade": "A/B", "note": "荡口古镇其余：老宅、河道、石桥细节" },
+    "chongyuan": { "grade": "A/B", "note": "重元寺其余：荷塘细节" },
+    "jammala": { "grade": "A/B", "note": "鼓面特写与教学现场" },
+    "pickleball": { "grade": "A/B", "note": "球场、球拍、入口" },
+    "firepit-*": { "grade": "A/B", "note": "火塘 7 张：bar / cocktail / entrance / interior / music-bar / promo / sign" },
+    "feiyueli": { "grade": "A", "note": "翡悦里；cover 已用" },
+    "hero-*.jpg": { "grade": "C", "note": "桨板/皮划艇 hero 图，与本版调性不符" },
+    "lady-routes": { "grade": "B", "note": "女性路线图，可用于分享卡" },
+    "maps": { "grade": "C", "note": "苏州/上海地图，底图素材" },
+    "brand": { "grade": "D", "note": "品牌头像、slogan banner、logo" },
+    "wechat-xiaozou-qr.png": { "grade": "D", "note": "v1 企业微信静态二维码；v2 已从主路径移除" },
+    "default-guide-avatar.svg": { "grade": "D", "note": "伙伴缺省头像" },
+    "experience-improv-dance.jpg": { "grade": "C", "note": "即兴舞现场，噪、偏演出" },
+    "experience-ruoci-meditation.jpg": { "grade": "C", "note": "实为茶包特写（FONTE 品牌），不能作静心主图" },
+    "login-bg.jpg": { "grade": "C", "note": "v1 登录背景" },
+    "xmusic-*.jpg": { "grade": "B", "note": "鼓/音乐现场素材，与 jammala 重复" }
+  }
+}

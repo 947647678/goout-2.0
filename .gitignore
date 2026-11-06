@@ -21,7 +21,12 @@
 # misc
 .DS_Store
 *.pem
+.env
 .env*.local
+**/data/*.db
+**/data/*.db-*
+**/data/*.sqlite
+*.log
 
 # debug
 npm-debug.log*

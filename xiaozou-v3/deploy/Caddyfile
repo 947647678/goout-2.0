@@ -1,0 +1,13 @@
+{
+	email admin@beyondyouth.com.cn
+}
+
+beyondyouth.com.cn, www.beyondyouth.com.cn {
+	encode gzip
+	reverse_proxy app:8099
+}
+
+http://:80 {
+	encode gzip
+	reverse_proxy app:8099
+}

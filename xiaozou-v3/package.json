@@ -1,0 +1,11 @@
+{
+  "name": "xiaozou-demo-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --experimental-sqlite voice-proxy-server.js"
+  },
+  "engines": {
+    "node": ">=23"
+  }
+}
